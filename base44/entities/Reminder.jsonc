@@ -1,0 +1,25 @@
+{
+  "name": "Reminder",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "due_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "notified": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "title",
+    "due_time"
+  ]
+}
