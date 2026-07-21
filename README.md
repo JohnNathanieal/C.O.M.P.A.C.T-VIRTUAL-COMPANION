@@ -1,41 +1,51 @@
-const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me: async()=>null }, entities:new Proxy({}, { get:()=>({ filter:async()=>[], get:async()=>null, create:async()=>({}), update:async()=>({}), delete:async()=>({}) }) }), integrations:{ Core:{ UploadFile:async()=>({ file_url:'' }) } } };
+<div align="center">
 
-**Welcome to your Base44 project** 
+# 🤖 Namakshar's Virtual Companion
 
-**About**
+**Personal AI, On Personal Devices.**
 
-View and Edit  your app on [db.com](http://db.com) 
+[![arXiv](https://img.shields.io/badge/arXiv-2605.17172-b31b1b.svg)](https://arxiv.org)
+[![Project](https://img.shields.io/badge/Project-Namakshar's_Companion-blue.svg)](https://github.com/JohnNathanieal/Namakshar-s-Virtual-Companion)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB.svg?logo=python&logoColor=white)](https://python.org)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Discord](https://img.shields.io/badge/Discord-Join-7289DA.svg?logo=discord&logoColor=white)](https://discord.gg)
 
-This project contains everything you need to run your app locally.
+</div>
 
-**Edit the code in your local development environment**
+---
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+<div align="center">
 
-**Prerequisites:** 
+[Documentation](#) | [Project Site](#) | [Paper](#) | [Leaderboard](#) | [Roadmap](#)
 
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
+</div>
 
-```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
+---
 
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.db.app
-```
+## Why Namakshar's Virtual Companion?
 
-Run the app: `npm run dev`
+Personal AI agents are exploding in popularity, but nearly all of them still route intelligence through cloud APIs. Your "personal" AI continues to depend on someone else's server. At the same time, local language models already handle the vast majority of single-turn chat and reasoning queries with incredible speed and efficiency. The models and hardware are increasingly ready. What has been missing is the software stack to make local-first personal AI practical.
 
-**Publish your changes**
+**Namakshar's Virtual Companion** is that stack. It is a framework for local-first personal AI, built around three core ideas: shared primitives for building on-device agents; evaluations that treat energy, latency, and resource costs as first-class constraints alongside accuracy; and a learning loop that improves models using local context data. The goal is simple: make it possible to build personal AI agents that run locally by default, calling external models only when necessary.
 
-Open [db.com](http://db.com) and click on Publish.
+---
 
-**Docs & Support**
+## Installation
 
-Documentation: [https://docs.db.com/Integrations/Using-GitHub](https://docs.db.com/Integrations/Using-GitHub)
+Pick your platform and run one command. Each installer handles virtual environments, dependencies, Ollama, and a starter model.
 
-Support: [https://app.db.com/support](https://app.db.com/support)
+| Platform | One-liner |
+| :--- | :--- |
+| **macOS · Linux · WSL2** | `curl -fsSL https://raw.githubusercontent.com/JohnNathanieal/Namakshar-s-Virtual-Companion/main/install.sh \| bash` |
+| **Native Windows** | `irm https://raw.githubusercontent.com/JohnNathanieal/Namakshar-s-Virtual-Companion/main/install.ps1 \| iex` |
+| **Desktop GUI** | Download `.exe` / `.dmg` / `.deb` / `.AppImage` from the latest release |
+
+Then run `companion` to start.
+
+---
+
+## Quick Start
+
+```bash
+companion                          # Start chatting (default: chat-simple)
+companion init --preset <name>     # Switch to a starter config
